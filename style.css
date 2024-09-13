@@ -1,0 +1,71 @@
+/* Basic resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f1f1f1;
+    color: #333;
+    padding: 20px;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+h1 {
+    text-align: center;
+    color: #007bff;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+/* Styling for the API containers */
+.api-container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease;
+}
+
+.api-container:hover {
+    transform: scale(1.05);
+}
+
+.api-container h3 {
+    margin-bottom: 15px;
+    color: #007bff;
+}
+
+.api-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    object-fit: cover;
+}
+
+.api-container p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+strong {
+    color: #007bff;
+}
+
+#bitcoin-price {
+    font-size: 1.2rem;
+}
+
+/* Responsive media queries */
+@media (min-width: 768px) {
+    .row .col-md-4 {
+        padding: 15px;
+    }
+}
