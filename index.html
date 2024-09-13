@@ -3,45 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>API Data Display</title>
+    <title>API Task with Promises</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .card {
+            margin-bottom: 30px;
+        }
+        .card img {
+            max-height: 400px;
+            object-fit: cover;
+        }
+        .loading {
+            text-align: center;
+            font-size: 24px;
+            color: #888;
+        }
+    </style>
 </head>
 <body>
+    <div class="container">
+        <h1 class="text-center mb-5">API Data Display</h1>
 
-<div class="container">
-    <h1>API Data Display</h1>
-    
-    <div class="row">
-        <!-- Dog API Section -->
-        <div class="col-md-4">
-            <div class="api-container">
+        <!-- Dog Image Card -->
+        <div class="card">
+            <div class="card-header">
                 <h3>Random Dog Image</h3>
-                <img id="dog-image" src="" alt="Random Dog">
+            </div>
+            <div class="card-body">
+                <img id="dog-image" src="" alt="Dog Image" class="img-fluid">
+                <p class="loading" id="dog-loading">Loading...</p>
             </div>
         </div>
 
-        <!-- Bitcoin API Section -->
-        <div class="col-md-4">
-            <div class="api-container">
-                <h3>Bitcoin Market Data</h3>
-                <p id="bitcoin-price">Loading Bitcoin market data...</p>
+        <!-- Bitcoin Price Card -->
+        <div class="card">
+            <div class="card-header">
+                <h3>Bitcoin Market Value</h3>
+            </div>
+            <div class="card-body">
+                <p id="bitcoin-price" class="loading">Loading...</p>
             </div>
         </div>
 
-        <!-- NASA API Section -->
-        <div class="col-md-4">
-            <div class="api-container">
-                <h3>NASA Image of the Day</h3>
-                <img id="nasa-image" src="" alt="NASA Image of the Day">
+        <!-- NASA Astronomy Picture Card -->
+        <div class="card">
+            <div class="card-header">
+                <h3>NASA Astronomy Picture of the Day</h3>
+            </div>
+            <div class="card-body">
+                <img id="nasa-image" src="" alt="NASA Image" class="img-fluid">
+                <p class="loading" id="nasa-loading">Loading...</p>
             </div>
         </div>
     </div>
-</div>
 
-<!-- External JavaScript -->
-<script src="script.js"></script>
+    <!-- Script for Bootstrap and API Calls -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
+    <!-- Your Main JavaScript -->
+    <script src="script.js"></script>
+
+    <!-- Add the Zenclass test script -->
+    <script src="https://app.zenclass.in/sheets/v1/js/zen/suite/bundle.js"></script>
 </body>
 </html>
- 

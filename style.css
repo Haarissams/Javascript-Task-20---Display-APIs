@@ -1,15 +1,6 @@
-/* Basic resets */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f1f1f1;
-    color: #333;
-    padding: 20px;
+    background-color: #f8f9fa; /* Light background for a clean look */
+    font-family: 'Roboto', sans-serif; /* Professional, modern font */
 }
 
 .container {
@@ -17,55 +8,70 @@ body {
 }
 
 h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #343a40; /* Dark gray for professional headings */
     text-align: center;
-    color: #007bff;
-    margin-bottom: 40px;
-    font-weight: bold;
+    margin-bottom: 50px;
+    text-transform: uppercase; /* Add uppercase for emphasis */
 }
 
-/* Styling for the API containers */
-.api-container {
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border: none; /* Remove border for a cleaner look */
+    border-radius: 10px; /* Smooth corners */
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out; /* Smooth hover effect */
     background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+    transform: translateY(-10px); /* Lift on hover for a modern effect */
+}
+
+.card-header {
+    background-color: #007bff; /* Bootstrap blue for header */
+    color: white;
     padding: 20px;
-    margin-bottom: 30px;
-    transition: transform 0.3s ease;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5rem;
 }
 
-.api-container:hover {
-    transform: scale(1.05);
+.card-body {
+    padding: 30px;
+    text-align: center;
 }
 
-.api-container h3 {
-    margin-bottom: 15px;
-    color: #007bff;
-}
-
-.api-container img {
+.card img {
+    max-height: 400px;
     width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 10px;
     object-fit: cover;
+    border-bottom: 1px solid #ddd; /* Separator between image and text */
 }
 
-.api-container p {
-    font-size: 1.1rem;
+.loading {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #6c757d; /* Light gray for loading text */
+}
+
+p {
+    font-size: 1rem;
+    color: #212529;
     line-height: 1.6;
 }
 
 strong {
-    color: #007bff;
+    font-weight: bold;
+    color: #495057; /* Darker gray for strong emphasis */
 }
 
-#bitcoin-price {
-    font-size: 1.2rem;
-}
-
-/* Responsive media queries */
-@media (min-width: 768px) {
-    .row .col-md-4 {
-        padding: 15px;
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem; /* Adjust heading for smaller screens */
+    }
+    .card-body {
+        padding: 20px; /* Adjust padding for smaller screens */
     }
 }
